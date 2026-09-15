@@ -25,7 +25,7 @@ export function Gallery() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Работы мастеров</h2>
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Работы Ольги</h2>
             <p className="mt-3 max-w-[60ch] text-muted-foreground">
               Фото до и после заживления, без ретуши. Ещё {site.rating.photos} фото в карточке студии.
             </p>

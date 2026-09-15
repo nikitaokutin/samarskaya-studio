@@ -41,7 +41,7 @@ export function ServiceTabs() {
         <Reveal>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Услуги и цены</h2>
           <p className="mt-3 max-w-[60ch] text-muted-foreground">
-            Выберите направление: покажем работы, цены обоих мастеров и отзывы клиентов именно на эту процедуру.
+            Выберите направление: покажем работы, цены и отзывы клиентов именно на эту процедуру.
           </p>
         </Reveal>
 

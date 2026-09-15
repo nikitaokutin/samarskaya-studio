@@ -53,7 +53,7 @@ export const site = {
 
 export const nav = [
   { label: 'Услуги', href: '#uslugi' },
-  { label: 'Мастера', href: '#mastera' },
+  { label: 'Мастер', href: '#mastera' },
   { label: 'Работы', href: '#raboty' },
   { label: 'Отзывы', href: '#otzyvy' },
   { label: 'Обучение', href: '#obuchenie' },
