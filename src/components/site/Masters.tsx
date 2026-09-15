@@ -1,12 +1,11 @@
 import { Reveal } from '@/components/site/Reveal'
 import { asset } from '@/content/site'
 
-// TODO: заменить фото на портрет Ольги, когда его пришлёт студия.
 const master = {
   name: 'Ольга Самарская',
   role: 'Топ-мастер, основатель академии',
-  photo: 'p24',
-  alt: 'Ольга Самарская с аппаратом для перманентного макияжа',
+  photo: 'olga',
+  alt: 'Ольга Самарская',
   text: 'Перманентный макияж всех зон, трихопигментация, камуфляж рубцов, удаление старого перманента лазером и ремувером, художественная татуировка. Обучает мастеров и ведёт наставничество.',
   facts: [
     'Все направления студии',
@@ -30,13 +29,15 @@ export function Masters() {
         <Reveal delay={0.08} className="mt-10">
           <article className="grid overflow-hidden rounded-2xl border bg-background md:grid-cols-2">
             <img
-              src={asset(`img/work/${master.photo}.webp`)}
+              src={asset(`img/${master.photo}.webp`)}
+              srcSet={`${asset(`img/${master.photo}-sm.webp`)} 800w, ${asset(`img/${master.photo}.webp`)} 1400w`}
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt={master.alt}
               loading="lazy"
               decoding="async"
-              width={1200}
-              height={900}
-              className="aspect-[4/3] h-full w-full object-cover md:aspect-auto md:min-h-[360px]"
+              width={1400}
+              height={934}
+              className="aspect-[3/2] h-full w-full object-cover md:aspect-auto md:min-h-[400px]"
             />
             <div className="flex flex-col p-6 md:p-8 lg:p-10">
               <h3 className="text-2xl font-semibold tracking-tight">{master.name}</h3>
