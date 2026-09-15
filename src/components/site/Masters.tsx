@@ -27,17 +27,17 @@ export function Masters() {
         </Reveal>
 
         <Reveal delay={0.08} className="mt-10">
-          <article className="grid overflow-hidden rounded-2xl border bg-background md:grid-cols-2">
+          <article className="grid overflow-hidden rounded-2xl border bg-background md:grid-cols-[minmax(0,440px)_1fr]">
             <img
               src={asset(`img/${master.photo}.webp`)}
-              srcSet={`${asset(`img/${master.photo}-sm.webp`)} 800w, ${asset(`img/${master.photo}.webp`)} 1400w`}
-              sizes="(min-width: 768px) 50vw, 100vw"
+              srcSet={`${asset(`img/${master.photo}-sm.webp`)} 480w, ${asset(`img/${master.photo}.webp`)} 640w`}
+              sizes="(min-width: 768px) 440px, 100vw"
               alt={master.alt}
               loading="lazy"
               decoding="async"
-              width={1400}
-              height={934}
-              className="aspect-[3/2] h-full w-full object-cover md:aspect-auto md:min-h-[400px]"
+              width={640}
+              height={640}
+              className="aspect-square h-full w-full object-cover"
             />
             <div className="flex flex-col p-6 md:p-8 lg:p-10">
               <h3 className="text-2xl font-semibold tracking-tight">{master.name}</h3>
