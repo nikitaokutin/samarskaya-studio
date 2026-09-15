@@ -25,10 +25,14 @@ export function ServiceTabs() {
     return () => window.removeEventListener('hashchange', apply)
   }, [])
 
-  // Активная вкладка всегда видна в горизонтальном списке
+  // Активная вкладка всегда видна в горизонтальной ленте.
+  // Двигаем только scrollLeft контейнера, чтобы не прокручивать страницу по вертикали.
   useEffect(() => {
-    const el = tabsRef.current?.querySelector<HTMLElement>(`[data-id="${activeId}"]`)
-    el?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' })
+    const wrap = tabsRef.current
+    const el = wrap?.querySelector<HTMLElement>(`[data-id="${activeId}"]`)
+    if (!wrap || !el) return
+    const left = el.offsetLeft - (wrap.clientWidth - el.offsetWidth) / 2
+    wrap.scrollTo({ left, behavior: reduce ? 'auto' : 'smooth' })
   }, [activeId, reduce])
 
   return (

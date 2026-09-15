@@ -19,7 +19,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pb-24 lg:pt-16">
         {/* Текст и логотип */}
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-7">
           <motion.div {...item(0)} className="mb-7 flex items-center gap-4">
             <LogoMark size={72} className="rounded-2xl shadow-card" />
             <div className="leading-tight">
@@ -30,13 +30,13 @@ export function Hero() {
 
           <motion.h1
             {...item(1)}
-            className="max-w-[16ch] text-4xl font-semibold leading-[1.05] tracking-tight text-balance md:text-5xl lg:text-6xl"
+            className="max-w-[26ch] text-4xl font-semibold leading-[1.05] tracking-tight text-balance md:text-5xl lg:max-w-none lg:text-[2.375rem] xl:text-[2.625rem]"
           >
-            Перманентный макияж, который выглядит как ваша природная красота
+            Перманентный макияж, который выглядит естественно
           </motion.h1>
 
           <motion.p {...item(2)} className="mt-6 max-w-[48ch] text-base leading-relaxed text-muted-foreground md:text-lg">
-            Брови, губы, веки, трихопигментация и удаление старого перманента. Форму согласуем до первой линии.
+            Брови, губы, веки, трихопигментация и удаление старого перманента. Форму и цвет согласуем до первой линии.
           </motion.p>
 
           <motion.div {...item(3)} className="mt-8 flex flex-wrap items-center gap-3">
@@ -51,12 +51,12 @@ export function Hero() {
         </div>
 
         {/* Фото и карточка рейтинга в духе 2ГИС */}
-        <div className="relative lg:col-span-6">
+        <div className="relative lg:col-span-5">
           <motion.div
             initial={reduce ? false : { opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease }}
-            className="relative ml-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-2xl bg-muted sm:aspect-[5/6]"
+            className="relative ml-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-2xl bg-muted"
           >
             <img
               src={asset('img/work/p01.webp')}
